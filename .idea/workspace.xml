@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4df60472-907c-48d8-b00a-8c13d6418907" name="Default Changelist" comment="" />
+    <list default="true" id="4df60472-907c-48d8-b00a-8c13d6418907" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/iconbh1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/iconbh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Beam.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Beam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Beamer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Beamer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Bullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Closer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Closer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Pulse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Pulse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Single.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Single.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Spinner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Spinner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Spread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell$Spread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bullet Hell Multi/bullethell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bullethell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bullethell.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +45,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XqxUitx9XvFy3IjUFk9cPvgzoh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -46,6 +67,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -86,11 +109,22 @@
       <option name="presentableId" value="Default" />
       <updated>1581787443340</updated>
       <workItem from="1581787446806" duration="604000" />
-      <workItem from="1581789778488" duration="18240000" />
+      <workItem from="1581789778488" duration="22348000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

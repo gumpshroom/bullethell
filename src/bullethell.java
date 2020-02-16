@@ -1,18 +1,6 @@
 import processing.core.*;
-import processing.data.*;
-import processing.event.*;
-import processing.opengl.*;
 
-import java.util.HashMap;
 import java.util.ArrayList;
-import java.io.File;
-import java.io.BufferedReader;
-import java.io.PrintWriter;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
-
-import static java.lang.Math.toDegrees;
 
 public class bullethell extends PApplet {
 
@@ -26,6 +14,11 @@ public class bullethell extends PApplet {
     double immunityStart = 0;
     double aura = 100;
     */
+    //icon
+    PImage fai_iconi;
+    PGraphics fai_icong;
+    String fai_filename;
+
     private boolean dead;
     private boolean score;
     private double timeSurvived;
@@ -641,15 +634,17 @@ public class bullethell extends PApplet {
             }
             if (!firing) {
                 timer += 1;
-                if (timer == 60) {
+                if (timer == 50) {
                     mx = mouseX;
                     my = mouseY;
                 }
-                if (distance(x, y, mouseX, mouseY) > aura && timer == 60 || timer == 70 || timer == 75 || timer == 80 || timer == 85 || timer > 90) {
+                if (distance(x, y, mouseX, mouseY) > aura && timer == 50 || timer == 60 || timer == 70 || timer == 75 || timer == 80 || timer == 85 || timer > 90) {
                     noFill();
-                    stroke(0);
+                    colorMode(HSB, (float) maxHue);
+                    stroke((float)(hue + maxHue / 2 % maxHue), (float) maxHue, (float) (maxHue / 1.5));
                     strokeWeight(5);
-                    ellipse((float)mx, (float)my, 120, 120);
+                    ellipse((float)mx, (float)my, 60, 60);
+                    colorMode(RGB);
                 }
                 if (timer > 100) {
                     //if(random(10) < 1) {
@@ -824,6 +819,9 @@ public class bullethell extends PApplet {
     public void setup() {
         font = createFont("Arial", 20);
         noCursor();
+        changeAppIcon( loadImage("data/iconbh1.png") );
+        changeAppTitle("Bullet Hell Multi");
+        //hint(ENABLE_STROKE_PURE);
         reset();
     }
 
@@ -925,5 +923,17 @@ public class bullethell extends PApplet {
         }
         return c;
     }
+    void changeAppIcon(PImage img) {
+        final PGraphics pg = createGraphics(16, 16, JAVA2D);
 
+        pg.beginDraw();
+        pg.image(img, 0, 0, 16, 16);
+        pg.endDraw();
+
+        frame.setIconImage(pg.image);
+    }
+
+    void changeAppTitle(String title) {
+        surface.setTitle(title);
+    }
 }
