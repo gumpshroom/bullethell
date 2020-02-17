@@ -2,15 +2,10 @@
   <artifact type="jar" name="Bullet Hell Multi:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Bullet_Hell_Multi_jar</output-path>
     <root id="archive" name="Bullet Hell Multi.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      </element>
       <element id="module-output" name="Bullet Hell Multi" />
       <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/core/library/jogl-all.jar" path-in-jar="/" />
       <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/core.jar" path-in-jar="/" />
       <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/core/library/gluegen-rt.jar" path-in-jar="/" />
-      <element id="library" level="project" name="core" />
-      <element id="library" level="project" name="jogl-all" />
       <element id="library" level="project" name="gluegen-rt" />
     </root>
   </artifact>

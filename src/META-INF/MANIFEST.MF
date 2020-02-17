@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: bullethell
+Class-Path: -Djava.library.path=YOUR_LIB_PATH
+
