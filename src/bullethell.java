@@ -1,5 +1,8 @@
 import processing.core.*;
+import processing.opengl.PJOGL;
 
+import java.awt.*;
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class bullethell extends PApplet {
@@ -49,6 +52,7 @@ public class bullethell extends PApplet {
         void render() {
             if (!score) {
                 colorMode(RGB, 255);
+                hint(ENABLE_STROKE_PURE);
                 stroke(255);
                 colorMode(HSB, (float) maxHue);
                 fill((float) h, (float) maxHue, (float) maxHue);
@@ -89,7 +93,7 @@ public class bullethell extends PApplet {
         void render() {
             if (!score) {
                 colorMode(RGB, 255);
-
+                hint(ENABLE_STROKE_PURE);
                 colorMode(HSB, (float) maxHue);
                 //fill((float) h, (float) maxHue, (float) maxHue);
                 stroke((float) h, (float) maxHue, (float) maxHue);
@@ -128,6 +132,7 @@ public class bullethell extends PApplet {
         void render() {
             if (!score) {
                 colorMode(RGB, 255);
+                hint(ENABLE_STROKE_PURE);
                 strokeWeight(1);
                 fill(255, min(pow((float) spawnTimer - (float) despawnTimer, 2), 255));
                 stroke(0, min(pow((float) spawnTimer - (float) despawnTimer, 2), 255));
@@ -144,6 +149,7 @@ public class bullethell extends PApplet {
             if (!score) {
                 strokeWeight(1);
                 colorMode(HSB, (float) maxHue);
+                hint(ENABLE_STROKE_PURE);
                 fill((float) hue, (float) maxHue, (float) maxHue, (float) maxHue * min(pow((float) spawnTimer - (float) despawnTimer, 2), 255) / (255 * 4));
                 stroke((float) hue, (float) maxHue, (float) maxHue, (float) maxHue * min(pow((float) spawnTimer - (float) despawnTimer, 2), 255) / 255);
                 strokeWeight(1);
@@ -641,6 +647,7 @@ public class bullethell extends PApplet {
                 if (distance(x, y, mouseX, mouseY) > aura && timer == 50 || timer == 60 || timer == 70 || timer == 75 || timer == 80 || timer == 85 || timer > 90) {
                     noFill();
                     colorMode(HSB, (float) maxHue);
+                    hint(ENABLE_STROKE_PURE);
                     stroke((float)(hue + maxHue / 2 % maxHue), (float) maxHue, (float) (maxHue / 1.5));
                     strokeWeight(5);
                     ellipse((float)mx, (float)my, 60, 60);
@@ -737,6 +744,7 @@ public class bullethell extends PApplet {
     private void deco() {
         strokeWeight(20);
         colorMode(HSB, (float) maxHue);
+        hint(ENABLE_STROKE_PURE);
         stroke((float) hue, (float) maxHue, (float) maxHue);
         line(0, 0, width, 0);
         line(width, 0, width, height);
@@ -759,6 +767,7 @@ public class bullethell extends PApplet {
             if (!score) {
                 noFill();
                 colorMode(HSB, (float) maxHue);
+                hint(ENABLE_STROKE_PURE);
                 stroke((float) hue, (float) maxHue, (float) maxHue, (float) (100 * maxHue / radius));
                 strokeWeight(1);
                 ellipse((float) x, (float) y, (float) radius, (float) radius);
@@ -772,6 +781,7 @@ public class bullethell extends PApplet {
 
     private void immunityAnimation() {
         colorMode(HSB, (float) maxHue);
+        hint(ENABLE_STROKE_PURE);
         stroke((float) hue, (float) maxHue, (float) maxHue);
         if (immunityStart < 1 && immune) {
             immunityStart += 0.05f;
@@ -819,8 +829,15 @@ public class bullethell extends PApplet {
     public void setup() {
         font = createFont("Arial", 20);
         noCursor();
-        changeAppIcon( loadImage("data/iconbh1.png") );
-        changeAppTitle("Bullet Hell Multi");
+        /*String[] lines = loadStrings("trash.txt");
+        println("there are " + lines.length + " lines");
+        for (int i = 0 ; i < lines.length; i++) {
+            println(lines[i]);
+        }
+*/
+        //PImage icon = loadImage("iconbh1.png");
+        //surface.setIcon(icon);
+        changeAppTitle("nut");
         //hint(ENABLE_STROKE_PURE);
         reset();
     }
@@ -829,6 +846,7 @@ public class bullethell extends PApplet {
         if (!dead) {
             background(255);
             colorMode(HSB, (float) maxHue);
+            hint(ENABLE_STROKE_PURE);
             fill((float) hue, (float) maxHue, (float) maxHue);
             ellipse(mouseX, mouseY, 5, 5);
             colorMode(RGB, 255);
@@ -901,6 +919,7 @@ public class bullethell extends PApplet {
     //processing config
     public void settings() {
         size(1000, 600, P2D);
+        PJOGL.setIcon("iconbh1.png");
     }
 
     public static void main(String[] passedArgs) {
@@ -922,15 +941,6 @@ public class bullethell extends PApplet {
                 c = !c;
         }
         return c;
-    }
-    void changeAppIcon(PImage img) {
-        final PGraphics pg = createGraphics(16, 16, JAVA2D);
-
-        pg.beginDraw();
-        pg.image(img, 0, 0, 16, 16);
-        pg.endDraw();
-
-        frame.setIconImage(pg.image);
     }
 
     void changeAppTitle(String title) {
